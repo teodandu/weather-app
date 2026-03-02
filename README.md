@@ -1,0 +1,1 @@
+Developed a responsive web application that displays real-time weather data using external APIs. Implemented user authentication, location-based weather detection, search functionality, and a favorites system using JavaScript and localStorage.

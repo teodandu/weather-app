@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Weather App</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="auth-page">
+
+  <div class="container">
+    <h2>Login</h2>
+
+    <input type="text" id="loginUser" placeholder="Username">
+    <br>
+    <input type="password" id="loginPass" placeholder="Password">
+    <br>
+    <button onclick="login()">Login</button>
+
+    <p>
+      Don't have an account?
+      <a href="signup.html">Sign up here</a>
+    </p>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script>
+  const isLoggedIn = localStorage.getItem("loggedIn");
+  if (isLoggedIn) {
+    window.location.href = "profile.html";
+  }
+</script>
+<footer class="footer">
+     <p>&copy 2025 Weather App </p>
+</footer>
+</body>
+</html>

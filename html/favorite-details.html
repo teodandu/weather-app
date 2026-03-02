@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City Details - Weather App</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="favorite-details-page">
+  <nav class="navbar">
+   <div class="nav-logo">
+      <img src="../images/logo1.png" alt="Logo">
+      <span>Weather App</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+     <a href="profile.html">Home</a>
+     <a href="search.html">Search</a>
+     <a href="forecast.html">Forecast</a>
+     <a href="favorites.html">Favorites</a>
+     <a href="#" class="logout" onclick="logout()">Logout</a>
+   </div>
+   <div class="burger" id="burgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
+  </nav>
+
+  <div class="container">
+  <h2 id="cityName"></h2>
+
+  <div id="weatherDetails"></div>
+  
+  </div>
+  <script src="../js/favorite-details.js"></script>
+  <script src="../js/auth.js"></script>
+  <script>
+    protectPage();
+  </script>
+  <footer class="footer">
+     <p>&copy 2025 Weather App </p>
+  </footer>
+<script>
+  const burger = document.getElementById("burgerBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navLinks.classList.toggle("open");
+  });
+</script>
+</body>
+</html>
